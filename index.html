@@ -1,3 +1,251 @@
 <!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h1>Carlos Aguilella</h1>
+
+
+
+
+
+<main>
+    <img src="foto.jpeg">
+
+    <div class="title">
+        <h1 class="name">Carlos</h1>
+        <h1 class="surname">Aguilella Tomás</h1>
+        <h1 class="status">Developer</h2>
+    </ul>
+
+    <div class="formacion">
+        <h2>Formación</h2>
+        <ul class="timeline">
+            <li>
+                <span class="date">2019 - 2021</span>
+                <span class="content1">Bachillerato científico-técnico</span>
+            </li>
+            
+            <li>
+                <span class="date">2022 - 2023</span>
+                <span class="content1">Grado superior Desarrollo de Aplicaciones Web</span> 
+                <span class="content2">Finalizado el primer año del grado</span>
+            </li>
+            </li>
+        
+            <li>
+                <span class="date">2022 - 2023</span>
+                <span class="content1">Grado superior Desarrollo de Aplicaciones Multiplataforma</span> 
+                <span class="content2">Finalizado el primer año del grado</span>
+            </li>
+        </ul>    
+    </div>
+    
+    <div class="experiencia">
+        <h2>Experiencia</h2>
+        <ul class="timeline">
+            <li>
+                Gestiones Comerciales en Supermercado
+                <ul>
+                    <li class="informacion">Gestión de pedidos y trato con los proveedores</li>
+                    <li class="informacion">Atención al cliente</li>
+                    <li class="informacion">Gestión de inventarios y almacén</li>
+                    <li class="informacion">Participar en las decisiones comerciales de la empresa</li>
+                    <li class="informacion">Formación y supervision de nuevos empleados</li>
+                    <li class="informacion">Diseño de objetivos a largo plazo de la empresa</li>    
+                </ul>
+            </li>
+        </ul>
+    </div>
+</main>
+
+
+<aside>
+
+    <div class="contacto">
+        <h2>Contacto</h2>
+        <ul>    
+            <li class="datos">673-536-812</li>
+            <li class="datos">caguilellat14@gmail.com</li>
+            <li class="datos">Calle Ros d'Orcins Nº29, 2B, Onda, Castellón, CP:12200</li>
+            <li class="datos">04/02/2003</li>
+        </ul>
+    </div>
+    
+    <div class="datos">
+        <h2 class="titulitos">Sobre mí</h2>
+        <ul>
+            <li class="sobreMi">Trabajo en equipo</li>
+            <li class="sobreMi">Creatividad</li>
+            <li class="sobreMi">Capacidad de Adaptación y Aprendizaje</li>
+            <li class="sobreMi">Habilidades comunicativas</li>
+            <li class="sobreMi">Implicación y esfuerzo</li>
+            <li class="sobreMi">Habilidades organizativas</li>
+            <li class="sobreMi">Proactividad e iniciativa</li>
+            <li class="sobreMi">Responsable</li>
+        </ul>
+        
+        <div class="idiomas">
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español</li>
+                <li>Valenciano</li>
+                <li>Inglés</li>
+            </ul>
+        </div> 
+
+        <h2 class="titulitos">Datos de Interés</h2>
+        <ul>
+            <li class="interes">Permiso de conducir B2</li>
+            <li class="interes">Vehículo propio</li>
+            <li class="interes">Posibilidad de incorporación inmediata</li>
+            <li class="interes">Disponibilidad Horaria</li>
+            <li class="interes">Deportista y amante de la naturaleza</li>
+        </ul>
+    </div>
+
+</aside>
+
+
+
+
+
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;800&display=swap');
+
+    img{
+        max-width: 10em;
+    }
+        
+    body {
+        font-family: 'Inter Tight', sans-serif;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+        
+    }
+
+    @media screen and (min-width: 968px){
+        body {
+            grid-template-columns: 7fr 3fr;
+            margin: auto;
+            max-width: 1080px;
+        }
+    }
+
+    aside {
+        color: rgb(36, 36, 36);
+    }
+
+    main, aside {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main {
+        background-color: rgb(255, 255, 255);
+    }
+
+    aside {
+        background-color: hsl(42, 75%, 44%);
+    }
+
+    aside h2 {
+        color: white;
+    }
+
+    img {
+        border-radius: 50%;
+        margin: auto;
+        display: block;
+        border: 8px outset gold;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    ul ul {
+        margin-block-start: 1em;
+    }
+
+    ul ul li {
+        list-style: "-";
+    }
+
+    li {
+        padding-bottom: 0.4em;
+        padding-left: 1em;
+        
+    }
+
+    .timeline {
+        padding: 40px;
+    }
+    .timeline > li {
+        border-left: 2px solid gray;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1em;
+    }
+
+    .timeline > li::before {
+        content: '';
+        background-color: #89bcdb;
+        width: 1em;
+        height: 1em;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        right: 1.55em;
+        top: 1.1em;
+    }
+
+    .timeline .date {
+        color: gray;
+    }
+
+    .timeline .content1 {
+        font-weight: 800;
+    }
+
+
+
+    .title .name {
+        font-size: 2.8em;
+        margin-bottom: 0;
+        color: transparent;
+        background: #009FFF; 
+        background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-clip: text;
+        -webkit-background-clip: text;
+
+    }
+
+    .title .surname {
+        font-size: 3.2em;
+        margin-top: -0.3em;
+        margin-bottom: 0;
+        background: #BE93C5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .title .status {
+        margin-top: -0.1em;
+        font-size: 2.6em;
+    }
+    
+    main,.contacto, .datos {
+        padding: 1em;
+    }
+
+    .contacto {
+        background-color: hsl(42, 75%, 34%);
+    }
+</style>
