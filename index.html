@@ -11,18 +11,58 @@
 
     <div class="title">
         <h1 class="name">Carlos</h1>
-        <h1 class="surname">Aguilella Tomás</h1>
-        <h1 class="status">Developer</h2>
+        <h1 class="surname">Aguilella Tomás {</h1>
+        <h1 class="status">&nbsp; &nbsp; &nbsp; &nbsp;Developer</h2>
+        <h1 class="surname">}</h1>
     </ul>
+
+    <div class="window-wrapper">
+        <div class="window">
+            <div class="topbar">
+                <span class="buttons">
+                    <span class="red-button"></span>
+                    <span class="green-button"></span>
+                    <span class="yellow-button"></span>
+                </span>
+                <span class="file">index.js</span>
+            </div>
+            <div class="content">
+                <div class="line-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <div class="code">
+                    export default function({ data }) {
+                        <br>
+                        return &lt;Layout&gt;<br>
+                        &lt;("https://github.com/carlosaquillea") /&gt;<br>
+                        &lt;/Layout&gt;<br>
+                        merad
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="formacion">
         <h2>Formación</h2>
         <ul class="timeline">
+            <li></li>
             <li>
                 <span class="date">2019 - 2021</span>
                 <span class="content1">Bachillerato científico-técnico</span>
+                <span class="content2">IES Serra d'Espadà, Onda</span>
+
             </li>
-            
+            <li>
+                <span class="date">2019 - 2021</span>
+                <span class="content1">Bachillerato científico-técnico</span>
+                <span class="content2">IES Serra d'Espadà, Onda</span>
+
+            </li>
             <li>
                 <span class="date">2022 - 2023</span>
                 <span class="content1">Grado superior Desarrollo de Aplicaciones Web</span> 
@@ -35,12 +75,14 @@
                 <span class="content1">Grado superior Desarrollo de Aplicaciones Multiplataforma</span> 
                 <span class="content2">Finalizado el primer año del grado</span>
             </li>
+            <li></li>
         </ul>    
     </div>
     
     <div class="experiencia">
         <h2>Experiencia</h2>
         <ul class="timeline">
+            <li></li>
             <li>
                 Gestiones Comerciales en Supermercado
                 <ul>
@@ -52,9 +94,105 @@
                     <li class="informacion">Diseño de objetivos a largo plazo de la empresa</li>    
                 </ul>
             </li>
+            <li>
+                Gestiones Comerciales en Supermercado
+                <ul>
+                    <li class="informacion">Gestión de pedidos y trato con los proveedores</li>
+                    <li class="informacion">Atención al cliente</li>
+                    <li class="informacion">Gestión de inventarios y almacén</li>
+                    <li class="informacion">Participar en las decisiones comerciales de la empresa</li>
+                    <li class="informacion">Formación y supervision de nuevos empleados</li>
+                    <li class="informacion">Diseño de objetivos a largo plazo de la empresa</li>    
+                </ul>
+            </li>
+            <li>
+                Gestiones Comerciales en Supermercado
+                <ul>
+                    <li class="informacion">Gestión de pedidos y trato con los proveedores</li>
+                    <li class="informacion">Atención al cliente</li>
+                    <li class="informacion">Gestión de inventarios y almacén</li>
+                    <li class="informacion">Participar en las decisiones comerciales de la empresa</li>
+                    <li class="informacion">Formación y supervision de nuevos empleados</li>
+                    <li class="informacion">Diseño de objetivos a largo plazo de la empresa</li>    
+                </ul>
+            </li>
+            <li></li>
         </ul>
     </div>
+
+
+    <style>
+        .window-wrapper {
+            margin-top: 3em;
+            margin-bottom: 3em;
+            display: flex;
+            justify-content: center;
+        }
+        .window {
+            background-color: #BE93C5;
+            display: flex;
+            flex-direction: column;
+            width: 36em;
+            font-family: 'Courier New', Courier, monospace;
+            box-shadow: 0px 0px 24px rgb(204, 204, 204);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .topbar {
+            background-color: #fff;
+            display: flex;
+            padding-left: 1em;
+        }
+        .content {
+            background-color: #fff;
+            display: flex;
+            border-top: 1px solid rgb(228, 228, 228);
+        }
+        .line-numbers {
+            background-color: #fafafa;
+            display: flex;
+            flex-direction: column;
+            padding-left: 0.8em;
+            padding-right: 0.4em;
+            padding-top: 0.8em
+        }
+
+        .code {
+            padding: 0.8em;
+        }
+
+        .file {
+            border-left: 1px solid rgb(228, 228, 228);
+            border-right: 1px solid rgb(228, 228, 228);
+            padding: 0.6em;
+        }
+        .buttons {
+            display: flex;
+            gap: 0.4em;
+            margin-right: 2em;
+            align-items: center;
+        }
+        .buttons span {
+            width: 0.8em;
+            height: 0.8em;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        .red-button {
+            background-color: #ff5f56;
+        }
+        .green-button {
+            background-color: #27c93f;
+        }
+        .yellow-button {
+            background-color: #ffbd2e;
+        }
+
+    </style> 
+    
 </main>
+
 
 
 <aside>
@@ -90,15 +228,38 @@
                 <li>Inglés</li>
             </ul>
         </div> 
+        
 
-        <h2 class="titulitos">Datos de Interés</h2>
-        <ul>
-            <li class="interes">Permiso de conducir B2</li>
-            <li class="interes">Vehículo propio</li>
-            <li class="interes">Posibilidad de incorporación inmediata</li>
-            <li class="interes">Disponibilidad Horaria</li>
-            <li class="interes">Deportista y amante de la naturaleza</li>
-        </ul>
+        <div class="titulitos">
+            <h2>Datos de Interés</h2>
+            <ul>
+                <li class="interes">Permiso de conducir B2</li>
+                <li class="interes">Vehículo propio</li>
+                <li class="interes">Posibilidad de incorporación inmediata</li>
+                <li class="interes">Disponibilidad Horaria</li>
+                <li class="interes">Deportista y amante de la naturaleza</li>
+            </ul>
+        </div>
+
+        <div class="titulitos">
+            <h2>Habilidades</h2>
+            <ul>
+                <li class="interes">Java</li>
+                <li class="interes">JavaScript</li>
+                <li class="interes">HTML</li>
+                <li class="interes">CSS</li>
+                <li class="interes">PostgreSQL</li>
+                <li class="interes">Virtualización en VirtualBox</li>
+                <li class="interes">Mantenimiento de Equipos</li>
+                <li class="interes">GitHub</li>
+                <li class="interes">Mantenimiento de Equipos</li>
+                <li class="interes">Mantenimiento de Equipos</li>
+
+
+                
+            </ul>
+        </div>
+        
     </div>
 
 </aside>
@@ -113,16 +274,33 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;800&display=swap');
 
+    html {
+        background-color: rgb(221, 207, 207);
+    }
+
     img{
         max-width: 10em;
+        display: block;
+        margin: auto;
+
     }
-        
+
+    img {
+        clip-path: polygon(0% 20%, 30% 0%, 70% 0%, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0% 80%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.6s ease-in-out;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+
     body {
         font-family: 'Inter Tight', sans-serif;
         display: grid;
         grid-template-columns: 1fr;
         margin: 0;
-        
+        box-shadow: 0px 0px 20px rgb(97, 90, 90);
     }
 
     @media screen and (min-width: 968px){
@@ -154,13 +332,6 @@
         color: white;
     }
 
-    img {
-        border-radius: 50%;
-        margin: auto;
-        display: block;
-        border: 8px outset gold;
-    }
-
     ul {
         list-style-type: none;
         padding: 0;
@@ -183,6 +354,23 @@
     .timeline {
         padding: 40px;
     }
+
+    .timeline > li:first-child::before,  .timeline > li:last-child::before{
+        content: none;
+    }
+
+    .timeline > li:first-child {
+        border-image: linear-gradient(transparent, rgb(212, 212, 212), gray 100%) 1 100%;
+        height: 0.4em;
+        width: 1em;
+    }
+
+    .timeline > li:last-child {
+        border-image: linear-gradient(gray, transparent) 1 100%;
+        height: 0.4em;
+        width: 1em;
+    }
+
     .timeline > li {
         border-left: 2px solid gray;
         display: flex;
