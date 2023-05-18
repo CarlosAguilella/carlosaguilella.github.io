@@ -7,45 +7,45 @@
 
 
 <main>
-    <img src="foto.jpeg">
+    <img src="foto.jpg">
 
     <div class="title">
         <h1 class="name">Carlos</h1>
         <h1 class="surname">Aguilella Tomás {</h1>
-        <h1 class="status">&nbsp; &nbsp; &nbsp; &nbsp;Developer</h2>
+            <div class="window-wrapper">
+                <div class="window">
+                    <div class="topbar">
+                        <span class="buttons">
+                            <span class="red-button"></span>
+                            <span class="green-button"></span>
+                            <span class="yellow-button"></span>
+                        </span>
+                        <span class="file">index.js</span>
+                    </div>
+                    <div class="content">
+                        <div class="line-numbers">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                        <div class="code">
+                            export default function({ data }) {
+                                <br>
+                                return &lt;Layout&gt;<br>
+                                &lt;("Soy un&nbsp;<span class="tw1"><span>estudiante</span><span>desarrollador web</span></span>")/&gt;<br></h2>
+                                &lt;/Layout&gt;<br>
+                                merad
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
         <h1 class="surname">}</h1>
     </ul>
 
-    <div class="window-wrapper">
-        <div class="window">
-            <div class="topbar">
-                <span class="buttons">
-                    <span class="red-button"></span>
-                    <span class="green-button"></span>
-                    <span class="yellow-button"></span>
-                </span>
-                <span class="file">index.js</span>
-            </div>
-            <div class="content">
-                <div class="line-numbers">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                </div>
-                <div class="code">
-                    export default function({ data }) {
-                        <br>
-                        return &lt;Layout&gt;<br>
-                        &lt;("https://github.com/carlosaquillea") /&gt;<br>
-                        &lt;/Layout&gt;<br>
-                        merad
-                    }
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <div class="formacion">
         <h2>Formación</h2>
@@ -119,15 +119,68 @@
             <li></li>
         </ul>
     </div>
-
+    <script>
+        async function doWrite(element)  {
+            const paraules =[...element.querySelectorAll("span")].map(span => span.innerText);
+        
+            while(true){
+                for (let t=0; t<paraules.length; t++){
+                    for (let l=0; l<paraules[t].length; l++){
+                        element.innerText = paraules[t].substring(0,l+1);
+                        await sleep(100);
+                    }
+        
+                    await sleep(2000);
+        
+                    for (let l=paraules[t].length; l>=0; l--) {
+                        await sleep(50);
+                        element.innerText = paraules[t].substring(0, l);
+                    }
+                    await sleep(600);
+                }
+            }
+        }
+        
+        document.querySelectorAll(".tw1").forEach(tw => doWrite(tw))
+        
+        function sleep(ms) {return new Promise(r => setTimeout(r, ms));}
+    </script>
 
     <style>
+        .tw1 {
+            padding-right: 0.05em;
+            border-right: 2px solid rgb(0, 0, 0);
+            animation-name: parpadeo;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% {
+                border-color: transparent;
+            }
+            50% {
+                border-color: rgb(0, 0, 0)
+            }
+        }
+
+        .title .tw1 {    
+            font-size: 1em;
+            font-style: italic;
+            color: transparent;
+            background: rgb(254,254,254);
+            background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
         .window-wrapper {
-            margin-top: 3em;
-            margin-bottom: 3em;
+            margin-top: 1em;
+            margin-bottom: 1em;
             display: flex;
             justify-content: center;
         }
+
         .window {
             background-color: #BE93C5;
             display: flex;
@@ -138,16 +191,19 @@
             border-radius: 5px;
             overflow: hidden;
         }
+
         .topbar {
             background-color: #fff;
             display: flex;
             padding-left: 1em;
         }
+
         .content {
             background-color: #fff;
             display: flex;
             border-top: 1px solid rgb(228, 228, 228);
         }
+
         .line-numbers {
             background-color: #fafafa;
             display: flex;
@@ -166,12 +222,14 @@
             border-right: 1px solid rgb(228, 228, 228);
             padding: 0.6em;
         }
+
         .buttons {
             display: flex;
             gap: 0.4em;
             margin-right: 2em;
             align-items: center;
         }
+
         .buttons span {
             width: 0.8em;
             height: 0.8em;
@@ -182,9 +240,11 @@
         .red-button {
             background-color: #ff5f56;
         }
+        
         .green-button {
             background-color: #27c93f;
         }
+
         .yellow-button {
             background-color: #ffbd2e;
         }
