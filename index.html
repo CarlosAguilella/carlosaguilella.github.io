@@ -123,15 +123,26 @@
     <div class="habilidades">
         <h2>Habilidades</h2>
                     <li class="informacion">Java</li>
+                    <span class="spinner"></span>
                     <li class="informacion">JavaScript</li>
+                    <span class="spinner"></span>
                     <li class="informacion">HTML</li>
+                    <span class="spinner"></span>
                     <li class="informacion">CSS</li>
+                    <span class="spinner"></span>
                     <li class="informacion">PostgreSQL</li>
+                    <span class="spinner"></span>
                     <li class="informacion">Virtualización en VirtualBox</li>
+                    <span class="spinner"></span>
                     <li class="informacion">Mantenimiento de Equipos</li>
+                    <span class="spinner"></span>
                     <li class="informacion">GitHub</li>
+                    <span class="spinner"></span>
                     <li class="informacion">Mantenimiento de Equipos</li>
+                    <span class="spinner"></span>
                     <li class="informacion">Mantenimiento de Equipos</li>
+                    <span class="spinner"></span>
+                    
         </ul>
     </div>
 
@@ -163,6 +174,39 @@
     </script>
 
     <style>
+        .spinner,
+        .spinner:after {
+            display: block;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        .spinner {
+            background-color: transparent;
+            border-top: 5px solid rgb(66, 139, 202);
+            border-right: 5px solid rgb(66, 139, 202);
+            border-bottom: 5px solid rgb(66, 139, 202);
+            border-left: 5px solid rgba(66, 139, 202, .2);
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-duration: .8s;
+            animation-name: spinner-loading;
+        }
+
+        @keyframes spinner-loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            /* Girar hasta el 75% (270 grados) */
+            75% {
+                transform: rotate(270deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         .tw1 {
             padding-right: 0.05em;
             border-right: 2px solid rgb(0, 0, 0);

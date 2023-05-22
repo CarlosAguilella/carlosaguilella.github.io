@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .spinner {
+            width: 200px;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background-color: #66aaff;
+            transition: width 0.5s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .spinner:hover .progress {
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner">
+        <div class="progress"></div>
+        <div class="progress-text">Loading...</div>
+    </div>
+</body>
+</html>
